@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  mlflow:
+    image: "ghcr.io/mlflow/mlflow:v2.2.2"
+    ports:
+      - "5000:5000"
+    command: "mlflow server"
+    environment:
+      - "MLFLOW_HOST=0.0.0.0"

@@ -1,0 +1,44 @@
+# reference: https://python-poetry.org/docs/pyproject/
+
+[tool.poetry]
+name = "mldemo"
+version = "0.1.0"
+description = "MLflow demo for the MLOps Community Meetup at Luxembourg."
+authors = ["Médéric Hurier (Fmind) <mederic.hurier@fmind.dev>"]
+repository = "https://github.com/fmind/mlflow-demo"
+readme = "README.md"
+license = "MIT"
+packages = [{include = "mldemo", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mlflow-skinny = "^2.2.2"
+pandas = "^2.0.0"
+scikit-learn = "^1.2.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+invoke = "^2.0.0"
+ipykernel = "^6.22.0"
+ipython = "^8.12.0"
+isort = "^5.12.0"
+mypy = "^1.2.0"
+pylint = "^2.17.2"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pylint.MASTER]
+disable = []
+max-line-length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

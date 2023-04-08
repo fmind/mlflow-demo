@@ -1,0 +1,25 @@
+# Build
+build/
+dist/
+
+# Cache
+.coverage*
+.mypy_cache/
+.pytest_cache/
+
+# Editor
+.idea/
+.vscode/
+
+# Notebook
+.ipynb_checkpoints/
+
+# Python
+*.py[cod]
+__pycache__/
+
+# Poetry
+poetry.lock
+
+# VirtualEnv
+.venv/
