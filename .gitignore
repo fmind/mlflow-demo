@@ -18,8 +18,5 @@ dist/
 *.py[cod]
 __pycache__/
 
-# Poetry
-poetry.lock
-
 # VirtualEnv
 .venv/
