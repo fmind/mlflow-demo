@@ -5,6 +5,7 @@
 from pprint import pprint
 
 import mlflow
+from mlflow.models.signature import infer_signature
 from sklearn import datasets, ensemble, metrics, model_selection
 
 # %% CONFIGS
@@ -52,8 +53,12 @@ with mlflow.start_run(description="Training") as run:
     model = ensemble.RandomForestClassifier(n_estimators=N_ESTIMATORS, max_depth=MAX_DEPTH, random_state=RANDOM_STATE)
     model.fit(X_train, y_train)
 
+    # - signature
+    # bug: it should be automatic
+    signature = infer_signature(X_train, y_test)
+
     # - registry
-    info = mlflow.sklearn.log_model(model, "model", registered_model_name=MODEL_NAME)
+    info = mlflow.sklearn.log_model(model, "model", signature=signature, registered_model_name=MODEL_NAME)
 
     print(f"[STOP] Run ID: {run.info.run_id}")
 
