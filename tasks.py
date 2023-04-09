@@ -7,6 +7,7 @@ from invoke.context import Context
 
 # %% TASKS
 
+
 @task
 def install(c: Context) -> None:
     """Install the project."""
@@ -15,5 +16,5 @@ def install(c: Context) -> None:
 
 @task
 def serve(c: Context) -> None:
-    """Tear up the project docker."""
+    """Start the mlflow server."""
     c.run("docker-compose up")

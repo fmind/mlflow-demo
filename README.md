@@ -28,4 +28,14 @@ Remember to activate the Virtual Environment before accessing the project:
 
 # Reproduction
 
-TODO
+## MLflow Tracking
+
+```bash
+poetry run python src/mldemo/tracking.py
+```
+
+## MLflow Registry
+
+```bash
+poetry run python src/mldemo/registry.py
+```
