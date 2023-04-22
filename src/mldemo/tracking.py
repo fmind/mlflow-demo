@@ -40,7 +40,7 @@ X_train, X_test, y_train, y_test = model_selection.train_test_split(
 # %% TRAINING
 
 # create one mlflow run for the training
-with mlflow.start_run(description="Training") as run:
+with mlflow.start_run(run_name="Training") as run:
     print(f"[START] Run ID: {run.info.run_id}")
 
     # - model
@@ -67,7 +67,7 @@ with mlflow.start_run(description="Training") as run:
 # %% TUNING
 
 # create one mlflow run for each model
-with mlflow.start_run(description="Tuning") as run:
+with mlflow.start_run(run_name="Tuning") as run:
     print(f"[START] Run ID: {run.info.run_id}")
 
     # - grid
