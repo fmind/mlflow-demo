@@ -13,7 +13,7 @@ packages = [{include = "mldemo", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 matplotlib = "^3.7.1"
-mlflow-skinny = "^2.2.2"
+mlflow-skinny = "^2.3.0"
 pandas = "^2.0.0"
 scikit-learn = "^1.2.2"
 
